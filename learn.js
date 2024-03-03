@@ -167,6 +167,68 @@ student1.showEnrolledCourses = function () {
 // student1 object 
 for (let prop in student1) { 
 	console.log(prop + " -> "
-		+ student1[prop]); 
+
+    + student1[prop]); 
 }
-let 
+
+
+// try {
+//    alert("welcome to my page");
+// }
+// catch(err){
+//     console.log(err)
+// }
+
+// obj_prop: new Date(setTimeout)
+
+// func_prop: function(){
+// 	console.log("welcome")
+// }
+// console.log(obj_prop.toLocaleTimeString())
+// """"Using constructors to create function and objects"""
+
+function vehicle(name, marker, engine){
+	this.name = name;
+	this.marker = marker;
+	this.engine = engine;
+}
+
+// new keyword to create an object
+let car =  new vehicle("Gt", "BMW", "199css");
+// property accessors
+console.log(car.name);
+console.log(car.marker);
+console.log(car['engine']);
+
+let car1 = {
+	name: 'GTA',
+	maker: 'BMW',
+	engine: '199ccs',
+	start: function(){
+		console.log('starting the engine....');
+	}
+};
+// car1.start();
+
+// adding property to the object
+car1.brakesType = 'All Disc';
+console.log(car1);
+console.log(car1.name);
+// adding a stop function()later to the object
+
+car1.stop = function(){
+	console.log('stopping the engine applying brakes to the engine');
+}
+car1.start();
+car1.stop()
+
+const coder = {
+	isStudying : false,
+	printIntroduction : function(){
+		console.log(`My name is ${this.name}. Am I studying?: ${this.isStudying}`);
+	}
+};
+const me = Object.create(coder);
+me.name = 'Mukul';
+me.isStudying = 'yes';
+me.printIntroduction();
